@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgb(63, 63, 63);
+}
+
+form {
+    padding: 30px 0;
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 5vh;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(59, 59, 59);
+}
+
+footer * {
+    padding: 0 20px;
+    display: flex;
+}
+
+footer div {
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.sites {
+    align-items: center;
+}
+
+.sites div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.sites div a {
+    padding: 5px;
+}
+
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    width: 100%;
+}
+
+.inputs input {
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+    color: black;
+    width: 200px;
+
+}
+
+.lastTr div input {
+    width: 100%;
+    color: black;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: rgb(226, 248, 255);
+    border-radius: 20px;
+    transition: .2s linear;
+}
+
+.lastTr div input:hover {
+    background-color: rgb(192, 192, 192);
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    * {
+        background-color: black;
+        color: white;
+    }
+    footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(59, 59, 59);
+}
+
+footer * {background-color: rgb(59, 59, 59);
+    padding: 0 20px;
+    display: flex;
+}
+
+footer div {
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.sites {
+    align-items: center;
+}
+
+.sites div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.sites div a {
+    padding: 5px;
+}
+    </style>
+    <script>
+        var textUri = document.documentURI;
+var data1 = textUri.split('?');
+var data2 = data1[1].replaceAll('%40', '@');
+var data3 = data2.replaceAll('+', ' ');
+function getUriData(text){
+    var textTab = text.split('&');
+    var textTemp; 
+
+    var data = new Array();
+    var i;
+
+for (i=0; i < textTab.length; i++)
+{
+    textTemp = textTab[i].split('=');
+    data[2*i] = textTemp[0];
+    data[2*i+1] = textTemp[1];
+}
+return data;
+}
+//kod w tym projekcie został zapisany i modyfikowany na podstawie zajęć z technik informatycznych
+    </script>
+</head>
+
+<body>
+
+    <footer> <div><span>zrobione przez:</span>
+        <span>Oliwier Orlik</span>
+    </div>
+        <div class="sites">
+            <span>Pozostałe projekty</span>
+            <div>
+            <a href="https://oliwierorlikstrona.netlify.app/">Strona internetowa</a>
+            <a href="https://oliwierorlikgra.netlify.app/">Kółko i krzyżyk</a>
+            <a href="https://oliwierorlikwordpress.netlify.app/">Word Press</a>
+        </div>
+        </div>
+    </footer>
+
+    <script>
+        var tab = getUriData(data3);
+        // for(i =0; i< tab.length;i++)
+        // document.write("<br />" + tab[i])
+        document.write("<table style=\"border: solid 1px blue; width:60%; margin: auto;\">");
+            for(i=0; i<tab.length; i+=2)
+            document.write("<tr><td>" +tab[i] + "</td><td>" +tab[i+1] + "</td></tr>");
+            document.write("</table>");
+
+            //kod w tym projekcie został zapisany i modyfikowany na podstawie zajęć z technik informatycznych
+    </script>
+</body>
+
+</html>
